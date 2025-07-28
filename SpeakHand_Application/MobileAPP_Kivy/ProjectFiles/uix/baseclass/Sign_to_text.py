@@ -7,6 +7,7 @@ import cv2
 import numpy as np
 import mediapipe as mp
 import joblib
+import tensorflow as tf
 
 warnings.filterwarnings('ignore')
 utils.load_kv("Sign_to_text.kv")

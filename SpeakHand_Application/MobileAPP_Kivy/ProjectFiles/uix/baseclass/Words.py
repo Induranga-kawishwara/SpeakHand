@@ -72,6 +72,7 @@ from kivy.uix.popup import Popup
 from kivy.uix.boxlayout import BoxLayout
 from kivymd.app import MDApp
 from kivymd.uix.screen import MDScreen
+import warnings
 
 utils.load_kv("Words.kv")
 

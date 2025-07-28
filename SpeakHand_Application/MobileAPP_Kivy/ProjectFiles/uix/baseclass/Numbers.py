@@ -1,3 +1,4 @@
+from main_imports import MDScreen
 from ProjectFiles.applibs import utils
 from kivy.lang import Builder
 from kivy.uix.video import Video
