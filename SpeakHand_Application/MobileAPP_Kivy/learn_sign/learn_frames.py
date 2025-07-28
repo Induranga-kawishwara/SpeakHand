@@ -2,7 +2,7 @@ import cv2
 import os
 
 # Path to the directory containing videos
-video_dir = r"C:\Users\MSI\OneDrive\Desktop\FINAL V10 Submitted\MobileAPP_Kivy\Asset\videos\words"
+video_dir = r"C:\Users\indur\OneDrive - University of Westminster\GitHub\SpeakHand\SpeakHand_Application\MobileAPP_Kivy\learn_sign\words"
 # Path to save extracted frames
 output_dir = "words"
 
