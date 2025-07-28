@@ -1,17 +1,13 @@
-from main_imports import MDScreen
-from ProjectFiles.applibs import utils
-from kivy.lang import Builder
-from kivy.uix.video import Video
-from kivy.uix.popup import Popup
-from kivy.uix.boxlayout import BoxLayout
-from kivymd.app import MDApp
 from kivymd.uix.screen import MDScreen
+from ProjectFiles.applibs import utils
 import warnings
 
+# Load the corresponding KV file
 utils.load_kv("Alphabet.kv")
+
+# Suppress warnings
 warnings.filterwarnings('ignore')
 
+# Define the Alphabet screen
 class Alphabet_Screen(MDScreen):
-
-
     pass
