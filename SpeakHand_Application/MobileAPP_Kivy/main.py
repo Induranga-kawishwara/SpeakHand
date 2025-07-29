@@ -19,8 +19,6 @@ Window.softinput_mode = "below_target"
 
 from ProjectFiles.uix.baseclass.root import Root
 
-from kivy.app import App
-from kivy.uix.screenmanager import ScreenManager, Screen
 from ProjectFiles.uix.baseclass.Main_Menu import Main_Menu_Screen
 from ProjectFiles.uix.baseclass.Sign_to_text import Sign_to_text_Screen
 from ProjectFiles.uix.baseclass.Text_to_Sign import Text_to_Sign_Screen
