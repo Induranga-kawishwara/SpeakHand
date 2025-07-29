@@ -17,86 +17,73 @@
             Color:
                 rgba: (1, 1, 1, 1)
             Rectangle:
-                source: "Asset//img//abc.png"  # Set your image here
+                source: "Asset//img//abc.png"
                 size: self.size
                 pos: self.pos
 
     Image:
-        source: "Asset//img//texttospeechbanner.png"  # Static image placeholder
+        source: "Asset//img//texttospeechbanner.png"
         id: avatar_image
         size_hint: 1, 1
         pos_hint: {"center_x": 0.5, "center_y": 0.78}
 
-
     MDTabs:
         id: tabs
         on_tab_switch: app.on_tab_switch(*args)
-        pos_hint: {"center_x": 0.5, "center_y": 0.45}  # Adjusted position
+        pos_hint: {"center_x": 0.5, "center_y": 0.45}
         size_hint_y: 0.3
 
         Tab:
             text: "English Speech"
-            BoxLayout:
-                orientation: "vertical"
-                padding: dp(10)
-                spacing: dp(10)
+            orientation: "vertical"
+            padding: dp(10)
+            spacing: dp(10)
 
-                MDLabel:
-                    text: "Text to Generate English Speech"
-                    halign: "center"
-                    font_style: "Subtitle1"
+            MDLabel:
+                text: "Text to Generate English Speech"
+                halign: "center"
+                font_style: "Subtitle1"
 
-                MDTextField:
-                    id: text_input_english
-                    size_hint: .75, None
-                    hint_text: "Enter English text here"
-                    pos_hint: {"center_x": 0.5}
-                    height: dp(40)
+            MDTextField:
+                id: text_input_english
+                size_hint: .75, None
+                hint_text: "Enter English text here"
+                pos_hint: {"center_x": 0.5}
+                height: dp(40)
 
-                MDCard:
-                    size_hint: .6, None
-                    height: dp(45)
-                    pos_hint: {"center_x": 0.5}
-                    radius: [20]  # Rounded corners
-
-                    MDRaisedButton:
-                        text: "Speak English"
-                        size_hint: 1, 1
-                        md_bg_color: 133/255, 63/255, 255/255, 1
-                        radius: [20]
-                        on_release: root.speak_text("en")
-
+            MDRaisedButton:
+                text: "Speak English"
+                size_hint: .6, None
+                height: dp(45)
+                pos_hint: {"center_x": 0.5}
+                md_bg_color: 133/255, 63/255, 255/255, 1
+                on_release: root.speak_text("en")
 
         Tab:
             text: "Sinhala Speech"
-            BoxLayout:
-                orientation: "vertical"
-                padding: dp(10)
-                spacing: dp(10)
+            orientation: "vertical"
+            padding: dp(10)
+            spacing: dp(10)
 
-                MDLabel:
-                    text: "Text to Generate Sinhala Speech"
-                    halign: "center"
-                    font_style: "Subtitle1"
+            MDLabel:
+                text: "Text to Generate Sinhala Speech"
+                halign: "center"
+                font_style: "Subtitle1"
 
-                MDTextField:
-                    id: text_input_sinhala
-                    size_hint: .75, None
-                    hint_text: "Enter Sinhala text here"
-                    pos_hint: {"center_x": 0.5}
-                    height: dp(40)
+            MDTextField:
+                id: text_input_sinhala
+                size_hint: .75, None
+                hint_text: "Enter Sinhala text here"
+                pos_hint: {"center_x": 0.5}
+                height: dp(40)
 
-                MDCard:
-                    size_hint: .6, None
-                    height: dp(45)
-                    pos_hint: {"center_x": 0.5}
-                    radius: [20]  # Rounded corners
-
-                    MDRaisedButton:
-                        text: "Speak Sinhala"
-                        size_hint: 1, 1
-                        md_bg_color: 133/255, 63/255, 255/255, 1
-                        on_release: root.speak_text("en")
+            MDRaisedButton:
+                text: "Speak Sinhala"
+                size_hint: .6, None
+                height: dp(45)
+                pos_hint: {"center_x": 0.5}
+                md_bg_color: 133/255, 63/255, 255/255, 1
+                on_release: root.speak_text("si")
 
     # Bottom Navigation Section
     BoxLayout:
@@ -110,7 +97,6 @@
         icon: "home"
         text_color: "white"
         theme_text_color: "Custom"
-        pos_hint: {"center_x": 0.1}
-        pos_hint: {"center_x": 0.50}
+        pos_hint: {"center_x": 0.5}
         user_font_size: "35sp"
         on_release: app.screen_manager.change_screen("Main_Menu")

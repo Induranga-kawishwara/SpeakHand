@@ -1,5 +1,6 @@
 from kivy.core.window import Window
-from kivy.uix.screenmanager import ScreenManager
+
+from main_imports import ScreenManager
 from ProjectFiles.applibs import utils
 
 utils.load_kv("root.kv")
@@ -18,7 +19,9 @@ class Root(ScreenManager):
             return True
     
     def previous_screen(self):
-
+        """
+        Switch to previous screen last screen in screen_list
+        """
         last_screen=self.screen_list.pop()
         if last_screen == "home" or last_screen == "login":
             exit()

@@ -1,0 +1,28 @@
+#python version 3.8
+#python -m pip install "pip<24.1"
+
+# Core Dependencies
+tensorflow==2.12.0
+mediapipe==0.10.5
+numpy==1.23.5
+pandas==1.3.5
+scikit-learn==1.0.2
+matplotlib==3.5.3
+joblib==1.1.1
+opencv-python==4.7.0.72
+
+# Kivy and KivyMD
+kivy==2.1.0
+kivymd==0.104.2
+
+# Supporting packages
+protobuf==3.20.3
+absl-py>=1.0.0
+grpcio>=1.48.2
+h5py==3.8.0
+six==1.16.0
+wheel==0.38.4
+wrapt==1.14.0
+typing-extensions==4.5.0
+pyttsx3==2.90
+

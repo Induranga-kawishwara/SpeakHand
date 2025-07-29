@@ -1,4 +1,4 @@
-from kivy.uix.boxlayout import BoxLayout
+from main_imports import BoxLayout
 from ProjectFiles.applibs import utils
 
 
