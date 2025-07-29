@@ -1,4 +1,4 @@
-from main_imports import MDScreen
+from kivymd.uix.screen import MDScreen
 from ProjectFiles.applibs import utils
 import warnings
 from kivy.graphics.texture import Texture
