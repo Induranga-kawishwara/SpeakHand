@@ -1,60 +1,151 @@
-# SpeakHand
+# SpeakHand ✋🗣️
 
-SpeakHand is a real-time American Sign Language (ASL) to speech and text translation application. Powered by computer vision and deep learning, it aims to bridge the communication gap for the deaf and hard-of-hearing community.
+**SpeakHand** is an accessibility-focused project that aims to **bridge communication gaps** by converting **hand gestures** into **text and/or speech**.
 
-## About The Project
+---
 
-This project was developed to provide an intuitive and accessible way to translate sign language into spoken words or written text in real-time. Using a standard webcam, SpeakHand captures hand gestures, processes them through a trained neural network, and outputs the corresponding translation. This facilitates smoother communication between sign language users and non-signers.
+## Table of Contents
+- [Overview](#overview)
+- [Problem & Goal](#problem--goal)
+- [Key Features](#key-features)
+- [Tech Stack](#tech-stack)
+- [How It Works](#how-it-works)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Run Instructions](#run-instructions)
+- [Configuration](#configuration)
+- [Troubleshooting](#troubleshooting)
+- [Author](#author)
 
-## Features
+---
 
-- **Real-time Translation**: Translates hand gestures from a live video feed.
-- **High Accuracy**: Utilizes a deep learning model for accurate gesture recognition.
-- **Text & Speech Output**: Displays the translated text and provides synthesized speech output.
-- **User-Friendly Interface**: Simple and intuitive GUI for easy interaction.
+## Overview
 
-## Technology Stack
+SpeakHand is built to help users communicate more easily by detecting hand movements/gestures and producing an understandable output (text/speech).  
+It can be used as a prototype for:
+- Gesture-to-text translation
+- Gesture-to-speech communication assistance
+- Assistive communication tools
 
-This project is built with a modern stack of technologies:
+---
 
-- [Python](https://www.python.org/)
-- [OpenCV](https://opencv.org/)
-- [TensorFlow](https://www.tensorflow.org/) / [Keras](https://keras.io/)
-- [Tkinter](https://docs.python.org/3/library/tkinter.html)
+## Problem & Goal
+
+Many people face barriers in communication due to hearing/speech impairments or language differences.  
+SpeakHand’s goal is to provide a **simple, real-time** way to convert **hand gestures into readable and audible output**, improving everyday communication and accessibility.
+
+---
+
+## Key Features
+
+
+- Real-time camera/webcam input
+- Hand detection / tracking
+- Gesture recognition (predefined signs/gestures)
+- Output as **text**
+- Optional **text-to-speech** (TTS) output
+- Simple UI for live preview + detected result
+- Offline-friendly workflow (local processing)
+
+---
+
+## Tech Stack
+
+> Update to match your repo.
+
+Common stacks used for this kind of project:
+
+- **Python** (gesture detection & recognition pipeline)
+  - OpenCV / MediaPipe (hand tracking)
+  - ML model (TensorFlow / PyTorch / scikit-learn) *(if used)*
+  - TTS (pyttsx3 / gTTS) *(if used)*
+- **Frontend/UI** (optional)
+  - Desktop UI (Tkinter / PyQt) OR Web UI (React) OR Mobile (Android/Flutter)
+
+---
+
+## How It Works
+
+Typical flow:
+
+1. **Capture** video frames from webcam/camera  
+2. **Detect & track** the hand landmarks / keypoints  
+3. **Classify** the gesture using a rules-based approach or ML model  
+4. **Convert** the predicted gesture into:
+   - Text output
+   - Speech output (TTS)
+
+---
 
 ## Getting Started
 
-To get a local copy up and running, follow these simple steps.
-
 ### Prerequisites
+- A webcam/camera (for real-time detection)
+- One of the following depending on your project type:
+  - **Python 3.9+**
+  - **Node.js 18+**
+  - **Android Studio / Java/Kotlin** *(if Android app)*
 
-Make sure you have the following installed on your system:
+### Run Instructions
 
-- Python 3.8+
-- pip (Python package installer)
+Because different projects use different stacks, use the instructions that match the files in your repo:
 
-### Installation
+#### If your repo has `requirements.txt` (Python)
+```bash
+python -m venv venv
+# Windows:
+venv\Scripts\activate
+# macOS/Linux:
+source venv/bin/activate
 
-1.  Clone the repository to your local machine:
-    ```sh
-    git clone https://github.com/Induranga-kawishwara/SpeakHand.git
-    ```
-2.  Navigate to the project directory:
-    ```sh
-    cd SpeakHand
-    ```
-3.  Install the required Python packages using `requirements.txt`:
-    ```sh
-    pip install -r requirements.txt
-    ```
+pip install -r requirements.txt
+python main.py
+```
 
-## Usage
+#### If your repo has `package.json` (Node/React)
+```bash
+npm install
+npm run dev
+# or
+npm start
+```
 
-Once the installation is complete, you can run the application.
+#### If your repo is an Android project
+- Open the project in **Android Studio**
+- Let Gradle sync
+- Run on an emulator or physical device
 
-1.  Execute the main script:
-    ```sh
-    python main.py
-    ```
-2.  The application window will open, and the webcam feed will start automatically.
-3.  Perform sign language gestures in front of the camera to see the real-time translation on the screen.
+---
+
+## Configuration
+
+Common configuration items you may have:
+- Camera index (e.g., `0` for default camera)
+- Model path (e.g., `./models/model.h5`)
+- Confidence threshold (e.g., `0.7`)
+- Output mode: `text` / `speech` / `both`
+
+> Document the exact variables and file locations used by your project.
+
+---
+
+## Troubleshooting
+
+**Camera not opening**
+- Close other apps using the webcam (Zoom/Teams/Browser)
+- Try changing camera index from `0` → `1`
+
+**Module not found / dependency errors**
+- Recreate virtual environment and reinstall dependencies
+- Confirm Python version matches your libraries
+
+**Slow performance**
+- Reduce resolution / FPS
+- Use GPU acceleration (if using ML frameworks)
+
+---
+
+## Author
+
+**Induranga Kawishwara**  
+GitHub: `Induranga-kawishwara`
