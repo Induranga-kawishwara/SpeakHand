@@ -124,9 +124,6 @@ Common configuration items you may have:
 - Model path (e.g., `./models/model.h5`)
 - Confidence threshold (e.g., `0.7`)
 - Output mode: `text` / `speech` / `both`
-
-> Document the exact variables and file locations used by your project.
-
 ---
 
 ## Troubleshooting
