@@ -51,8 +51,6 @@ SpeakHand’s goal is to provide a **simple, real-time** way to convert **hand g
 
 ## Tech Stack
 
-> Update to match your repo.
-
 Common stacks used for this kind of project:
 
 - **Python** (gesture detection & recognition pipeline)
@@ -100,14 +98,6 @@ source venv/bin/activate
 
 pip install -r requirements.txt
 python main.py
-```
-
-#### If your repo has `package.json` (Node/React)
-```bash
-npm install
-npm run dev
-# or
-npm start
 ```
 
 #### If your repo is an Android project
